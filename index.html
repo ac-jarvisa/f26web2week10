@@ -6,12 +6,24 @@
     <title>Random Bonus Stuff!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- this will tell the font to load first - before other elements on the page
+     you need to get the location of the google font from chrome's developer tools
+     (either sources or network) -->
+    <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/adventpro/v33/V8mAoQfxVT4Dvddr_yOwhTqtKA.woff2"
+        fetchpriority=""
+        as="font"
+        crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wdth,wght@0,100..200,100..900;1,100..200,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <h1>Random Bonus Stuff</h1>
+        <img src="images/cat-and-kitten-snuggling.jpg" alt="a cat and kitten snuggling" loading="eager">
     </header>
 
     <main>
@@ -28,6 +40,34 @@
             <p>Windows are essential architectural features that allow natural light, ventilation, and views to connect the indoors with the outdoors while also shaping the overall appearance of a building. In homes, offices, and public spaces, they can make a room feel brighter, larger, and more welcoming, or they can create a sense of privacy, enclosure, and calm depending on their size, placement, and design. Historically, windows were simple openings in walls, but modern versions are engineered with advanced glass, framing materials, and sealing systems that improve insulation and reduce energy loss. Large picture windows can capture sweeping landscapes, while narrow casement or awning styles may emphasize ventilation and airflow.</p>
             <p contenteditable="true">Windows are essential architectural features that allow natural light, ventilation, and views to connect the indoors with the outdoors while also shaping the overall appearance of a building. In homes, offices, and public spaces, they can make a room feel brighter, larger, and more welcoming, or they can create a sense of privacy, enclosure, and calm depending on their size, placement, and design. Historically, windows were simple openings in walls, but modern versions are engineered with advanced glass, framing materials, and sealing systems that improve insulation and reduce energy loss. Large picture windows can capture sweeping landscapes, while narrow casement or awning styles may emphasize ventilation and airflow.</p>
             <p>Windows are essential architectural features that allow natural light, ventilation, and views to connect the indoors with the outdoors while also shaping the overall appearance of a building. In homes, offices, and public spaces, they can make a room feel brighter, larger, and more welcoming, or they can create a sense of privacy, enclosure, and calm depending on their size, placement, and design. Historically, windows were simple openings in walls, but modern versions are engineered with advanced glass, framing materials, and sealing systems that improve insulation and reduce energy loss. Large picture windows can capture sweeping landscapes, while narrow casement or awning styles may emphasize ventilation and airflow.</p>
+        </section>
+
+        <section class="clp">
+            <h2>Unclamped Text</h2>
+            <h3>Clamped Text</h3>
+        </section>
+
+        <section class="textbox">
+            <article class="clearfix">
+                <img src="images/kitten-small.png" alt="a small kitten">
+                <h2>Kitten!</h2>
+                <p>Kittens are playful, curious little animals that love to explore their surroundings with bright eyes and twitching whiskers. They spend much of their early days napping, pouncing, and learning how to use their paws and claws. Their soft fur, tiny size, and adorable expressions make them popular pets, and they often bond quickly with people who care for them. Kittens also use a variety of sounds, from gentle meows to playful chirps, to communicate with humans and other animals.</p>
+            </article>
+
+            <article class="clearfix">
+                <img src="images/kitten-small.png" alt="a small kitten">
+                <h2>Kitten!</h2>
+                <p>Kittens are playful, curious little animals that love to explore their surroundings with bright eyes and twitching whiskers. They spend much of their early days napping, pouncing, and learning how to use their paws and claws. Their soft fur, tiny size, and adorable expressions make them popular pets, and they often bond quickly with people who care for them. Kittens also use a variety of sounds, from gentle meows to playful chirps, to communicate with humans and other animals.</p>
+            </article>            
+        </section>
+
+        <section>
+            <h2>A bunch of really big images</h2>
+            <!-- loading lazy tells the browser not to load the image until
+             the user scrolls to it -->
+            <img src="images/Juvenile_Ragdoll.jpg" loading="lazy" alt="a kitten">
+            <img src="images/kittens-hanging-1.jpg" loading="lazy" alt="kittens hanging from a window frame">
+            <img src="images/tiny-kitten-in-sunlight.webp" loading="lazy" alt="a tiny kitten">
         </section>
     </main>
 </body>

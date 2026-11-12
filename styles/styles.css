@@ -59,6 +59,10 @@ table {
     clear: both;
 }
 
+img{
+    max-width:100%;
+}
+
 
 /*****************
     VARIABLE FONTS
@@ -106,4 +110,62 @@ table {
     text-wrap: stable;
     /* supposedly keeps editable text from rebalancing
     too much */
+}
+
+
+/************************
+    CLAMP
+************************/
+
+.clp h2{
+    font-size:6vw;
+}
+
+.clp h3{
+    font-size: clamp(32px, 6vw, 64px);
+    /* clamp needs three values:
+        the minimum size
+        the responsive size (the size it will be
+            as long as it's between the min and max)
+        the maximum size
+    */
+}
+
+
+/************************
+    TEXT BOX TRIM
+************************/
+
+.textbox article{
+    border-top:1px solid red;
+    margin-bottom: 1em;
+}
+
+.textbox img{
+    float:left;
+}
+
+.textbox h2{
+    font-family: "Advent Pro", sans-serif;
+    font-size:36px;
+    font-weight:550;
+    font-variation-settings: "wdth" 150;
+}
+
+.textbox article:nth-of-type(1) h2{
+    /* use textbox trim and textbox edge to remove
+    default space around the font */
+
+    text-box-trim:trim-start;
+    text-box-edge:cap text;
+
+    /* text-box-edge requires two value for top and bottom
+    the top can be:
+        cap: trims to the height of the capital letters
+        ex: trims to the height of the lower case x
+        text: default spacing
+    the bottom can be:
+        alphabetic: trims to the baseline of the text
+        (cuts off descenders on g or y)
+        text: default spacing */
 }
